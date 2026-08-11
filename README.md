@@ -1,20 +1,19 @@
-# Seedream Portrait Agent
 
-一个仅使用 Python + Gradio + Seedream API 的人物图片 Agent Demo。
+<img src="assets/vstudio_wordmark.png">
 
 ## 1. 创建环境
 
 推荐 Python 3.11 或 3.12。
 
 ```bash
-python3.11 -m venv venv
-source venv/bin/activate
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+# venv\Scripts\activate    # Windows
+
 pip install -r requirements.txt
 ```
 
 ## 2. 配置 API Key
-
-复制：
 
 ```bash
 cp .env.example .env
@@ -25,8 +24,6 @@ cp .env.example .env
 ```env
 ARK_API_KEY=你的火山方舟_API_Key
 ```
-
-不要把 `.env` 提交到 Git。
 
 ## 3. 本地运行
 
@@ -96,10 +93,9 @@ SEEDREAM_API_URL
 
 ## HEIC / iPhone 图片支持
 
-项目已通过 `pillow-heif` 给 Pillow 注册 HEIC/HEIF 解码器，因此 Gradio 的人物图片上传支持
-常见的 JPG、PNG、WEBP，以及 iPhone 常见的 HEIC/HEIF。
+图片上传支持： JPG、PNG、WEBP，以及 iPhone 常见的 HEIC/HEIF。
 
-如果是从旧版本升级，请执行：
+如果pillow是从旧版本升级，请执行：
 
 ```bash
 pip install -U pillow-heif
